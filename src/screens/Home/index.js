@@ -14,6 +14,7 @@ const Home = () => {
             </p>
           </div>
           <div className={styles.explore}>
+            <div className={styles.exploreGrow}></div>
               <p className={styles.explore_text}>Explore</p>
           </div>
     </div>

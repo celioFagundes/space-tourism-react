@@ -53,16 +53,29 @@ p {
 }
 
 .explore {
-  
-  width: 274px;
-  height: 274px;
+  position:relative;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   background-color: #fff;
   display: -ms-grid;
   display: grid;
   place-content: center;
+  cursor: pointer;
 }
-
+.exploreGrow{
+  position:absolute;
+  top:0;
+  left:0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: #ffffff1a;
+  transition: all 0.4s;
+}
+.exploreGrow:hover{
+  transform: scale(150%);
+}
 .explore_text {
   font-family: 'Bellefair', serif;
   font-size: 32px;
