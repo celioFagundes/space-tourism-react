@@ -62,6 +62,7 @@ p {
   display: grid;
   place-content: center;
   cursor: pointer;
+  text-decoration: none
 }
 .exploreGrow{
   position:absolute;

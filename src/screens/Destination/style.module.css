@@ -9,29 +9,39 @@
     background-size: cover;
   }
   .container {
-    display: -ms-grid;
-    display: grid;
+    display: flex;
     max-width: 1200px;
+    width: 100%;
     padding-top: 100px;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     justify-items:flex-end;
     margin: 0;
     color: white;
   }
-.colum1{
+
+  .containerPlanet{
+    display: flex;
+    height: 420px;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0;
+    color: white;
+  }
+.label{
      font-family: 'Barlow Condensed', sans-serif;
      font-size: 28px;
      text-transform: uppercase;
      margin-right:120px;
 }
 
-.colum1 span{
+.label span{
     color: #4E5058;
     margin-right: 28px;
+}
+.colum1{
+  padding-right: 150px;
 }
 .colum1 img {
     height: 380px;
@@ -52,7 +62,6 @@
 .navPlanets {
   height: 100%;
   width: 100%;
-  position: relative;
   display: flex;
   align-items: center;
 }
@@ -76,11 +85,15 @@
 .link:hover{
   border-bottom: 3px solid #979797;
 }
-
+.description{
+  height: 90px;
+}
 .containerDescription p {
   font-family: 'Barlow Condensed', sans-serif;
   max-width: 370px;
   font-size: 18px;
+
+  
 }
 .descLine {
   height: 1px;

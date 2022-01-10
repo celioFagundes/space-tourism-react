@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './style.module.css'
+import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div className = {styles.wrapper}>
@@ -13,10 +14,10 @@ const Home = () => {
               truly out of this world experience!
             </p>
           </div>
-          <div className={styles.explore}>
+          <Link to = '/destination/moon'className={styles.explore}>
             <div className={styles.exploreGrow}></div>
               <p className={styles.explore_text}>Explore</p>
-          </div>
+          </Link>
     </div>
     </div>
   )
