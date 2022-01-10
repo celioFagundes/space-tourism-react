@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 const Header = () => {
   const location = useLocation()
-  console.log(location)
   return (
     <div className={styles.wrapper}>
       <img src={logo} className={styles.logo} />
@@ -20,8 +19,8 @@ const Header = () => {
             <span className={styles.screenId}>00</span> Home
           </Link>
           <Link
-            to='/destination'
-            className={`${styles.link} ${location.pathname === '/destination' && styles.linkActive}`}
+            to='/destination/moon'
+            className={`${styles.link} ${location.pathname.includes('destination') && styles.linkActive}`}
           >
             <span className={styles.screenId}>01</span> Destination
           </Link>

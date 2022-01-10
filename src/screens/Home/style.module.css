@@ -12,7 +12,7 @@
   display: -ms-grid;
   display: grid;
   max-width: 1200px;
-  padding-top: 200px;
+  padding-top: 100px;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   -webkit-box-align: end;
