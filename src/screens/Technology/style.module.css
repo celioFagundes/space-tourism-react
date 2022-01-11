@@ -1,0 +1,114 @@
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    background-image: url('../../assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-end;
+    margin: 0;
+    color: white;
+  }
+  
+  .label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-right: 120px;
+    color: white;
+    margin-bottom: 60px;
+  }
+  
+  .label span {
+    color: #4e5058;
+    margin-right: 28px;
+  }
+  
+  .containerCrew {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-end;
+    justify-items:flex-end;
+    margin: 0;
+    color: white;
+  }
+  
+  .memberInfo{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: flex-end;
+    width: 700px;
+    padding: 0;
+  }
+  .memberInfo p:nth-child(1) {
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .memberInfo p:nth-child(2) {
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    font-size: 56px;
+    margin: 15px 0 27px 0;
+    
+  }
+  .memberInfo p:nth-child(3) {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    text-transform: none;
+    min-height: 88px;
+    max-width: 480px;
+  }
+  .imgContainer{
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    
+  }
+  .memberImg {
+    height: 400px;
+  }
+  
+  .dotsContainer{
+      display: flex;
+      flex-direction: column;
+      margin-right: 80px;
+  }
+  .dot{
+      height: 80px;
+      width: 80px;
+      display: flex;
+      font-size: 32px;
+      font-family: 'Bellefair', serif;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: #131520;
+      transition: all 0.4s;
+      border: 1px solid #86878C;
+  }
+  .dot:hover{
+    border-color: #fff;
+  }
+  .dotActive{
+    background-color: #fff;
+    color: #0B0D17;
+    
+  }
+  

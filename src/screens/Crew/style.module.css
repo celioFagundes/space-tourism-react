@@ -4,7 +4,7 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
-  background-image: url('../../../starter-code/assets/crew/background-crew-desktop.jpg');
+  background-image: url('../../assets/crew/background-crew-desktop.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -27,6 +27,7 @@
   text-transform: uppercase;
   margin-right: 120px;
   color: white;
+  margin-bottom: 60px;
 }
 
 .label span {
@@ -35,50 +36,68 @@
 }
 
 .containerCrew {
-  display: flex;
-  height: 420px;
+  display: -ms-grid;
+  display: grid;
   width: 100%;
+  grid-template-columns: 2fr 1fr;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-items:flex-end;
   margin: 0;
   color: white;
 }
-.memberInfo {
-  margin-right: 400px;
+
+.memberInfo{
+  
+  height: 400px;
+  width: 700px;
 }
 .memberInfo p:nth-child(1) {
   font-family: 'Bellefair', serif;
+  text-transform: uppercase;
   color: #565860;
   font-size: 32px;
 }
 .memberInfo p:nth-child(2) {
   font-family: 'Bellefair', serif;
+  text-transform: uppercase;
   font-size: 56px;
   margin: 15px 0 27px 0;
+  
 }
 .memberInfo p:nth-child(3) {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 18px;
   text-transform: none;
-  max-width: 450px;
+  min-height: 88px;
+  max-width: 480px;
+}
+.imgContainer{
+  position: absolute;
+  right: 10%;
+  bottom: 0;
 }
 .memberImg {
-  position: absolute;
-  right: 15%;
-  bottom: 0;
-  height: 450px;
-  width: 310px;
+  height: 500px;
 }
 
 .dotsContainer{
     display: flex;
+    margin-top: 100px;
 }
 .dot{
     height: 15px;
     width: 15px;
-    margin-top: 120px;
+    
     margin-right: 24px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #131520;
+    transition: all 0.4s;
+}
+.dot:hover{
+  background-color: #86878C;
+}
+.dotActive{
+  background-color: #fff;
+  
 }

@@ -2,7 +2,9 @@ import React from 'react'
 import styles from './style.module.css'
 import { Link } from 'react-router-dom'
 const Home = () => {
+  
   return (
+    
     <div className = {styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.container_intro}>

@@ -75,7 +75,7 @@
   line-height: 48px;
   margin-right: 48px;
   border-bottom: 3px solid transparent;
- 
+  transition: all 0.4s;
   
 }
 .linkActive{
@@ -92,7 +92,7 @@
   font-family: 'Barlow Condensed', sans-serif;
   max-width: 370px;
   font-size: 18px;
-
+  
   
 }
 .descLine {

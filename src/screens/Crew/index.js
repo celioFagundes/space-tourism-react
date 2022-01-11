@@ -1,35 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './style.module.css'
-import crewImg from '../../assets/crew/image-mark-shuttleworth.png'
+
+import crewData from '../../data.json'
 const Crew = () => {
+  const [currentMember, setCurrentMember] = useState(crewData.crew[0])
+  console.log(currentMember)
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.label}>
           <p>
-            <span>01</span>Pick your destination
+            <span>02</span>Meet your Crew
           </p>
+        </div>
+        {currentMember && (
           <div className={styles.containerCrew}>
-            <div className={ styles.memberInfo}>
-              <p>Mission Specialist </p>
-              <p>MARK SHUTTLEWORTH</p>
-              <p>
-                Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
-                the Linux-based Ubuntu operating system. Shuttleworth became the first South African
-                to travel to space as a space tourist.
-              </p>
-              <div className={ styles.dotsContainer}>
-                <div className={ styles.dot}></div>
-                <div className={ styles.dot}></div>
-                <div className={ styles.dot}></div>
-                <div className={ styles.dot}></div>
+            <div className={styles.memberInfo}>
+              <p>{currentMember.role} </p>
+              <p>{currentMember.name}</p>
+              <p>{currentMember.bio}</p>
+              <div className={styles.dotsContainer}>
+                <div
+                  className={`${styles.dot} ${
+                    currentMember.name === 'Douglas Hurley' && styles.dotActive
+                  }`}
+                  onClick={() => setCurrentMember(crewData.crew[0])}
+                ></div>
+                <div
+                  className={`${styles.dot} ${
+                    currentMember.name === 'Mark Shuttleworth' && styles.dotActive
+                  }`}
+                  onClick={() => setCurrentMember(crewData.crew[1])}
+                ></div>
+                <div
+                  className={`${styles.dot} ${
+                    currentMember.name === 'Victor Glover' && styles.dotActive
+                  }`}
+                  onClick={() => setCurrentMember(crewData.crew[2])}
+                ></div>
+                <div
+                  className={`${styles.dot} ${
+                    currentMember.name === 'Anousheh Ansari' && styles.dotActive
+                  }`}
+                  onClick={() => setCurrentMember(crewData.crew[3])}
+                ></div>
               </div>
             </div>
-            <div>
-              <img className= { styles.memberImg} src={crewImg} />
+            <div className={styles.imgContainer}>
+              <img
+                className={styles.memberImg}
+                src={require(`../../assets/crew/${currentMember.images.png}.png`)}
+              />
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

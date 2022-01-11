@@ -9,13 +9,13 @@
   align-items: center;
   justify-content: space-between;
 }
-.logo{
+.logo {
   margin-left: 45px;
 }
-.line{
+.line {
   position: absolute;
   left: 11%;
-  height:1px;
+  height: 1px;
   width: 37%;
   background-color: #979797;
 }
@@ -25,24 +25,29 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
-  
+}
+.checkbtn {
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+.check {
+  display: none;
 }
 .blurContainer {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(27px);
   height: 100%;
-  width: 55%;
+  width: 100%;
   top: 0;
   right: 0;
-  
 }
 .list_links {
   display: flex;
-  z-index: 1000;
   list-style: none;
   width: 100%;
-  
+  z-index: 1000;
 }
 
 .link {
@@ -55,15 +60,98 @@ nav {
   line-height: 96px;
   margin-right: 48px;
   border-bottom: 3px solid transparent;
+  transition: all 0.4s;
 }
-.linkActive{
+.linkActive {
   border-bottom: 3px solid #fff;
 }
-.link:hover{
+.link:hover {
   border-bottom: 3px solid #979797;
 }
-.screenId{
+.screenId {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: bold;
   margin-right: 14px;
+}
+@media (max-width: 1100px) {
+  .wrapper {
+    top: 0;
+  }
+  .blurContainer {
+    width: 100%;
+  }
+  .list_links {
+    justify-content: space-around;
+  }
+  .link {
+    margin-right: 0px;
+  }
+  .screenId,
+  .line {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .checkbtn {
+    display: block;
+  }
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+  .blurContainer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 250px;
+    width: 100%;
+    right: -250%;
+    transition: all 0.3s;
+  }
+  nav {
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right: 20px;
+    width: 60%;
+    max-width: 250px;
+   
+  }
+  .list_links {
+    box-sizing: border-box;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    right: -250%;
+    top: 100px;
+    max-width: 250px;
+    transition: all 0.3s;
+  }
+  .screenId {
+    display: inline;
+  }
+  .link {
+    margin-bottom: 50px;
+    line-height: 0px;
+    
+  }
+  .link:hover {
+    border: 0;
+  }
+  .linkActive {
+    border-bottom: 0px;
+  }
+  input[type='checkbox']:checked ~ ul {
+    right: 0px;
+    top: 100px;
+    position: absolute;
+    z-index: 10;
+  }
+  input[type='checkbox']:checked ~ .blurContainer {
+    right: 0px;
+
+    position: absolute;
+    z-index: 10;
+  }
 }
