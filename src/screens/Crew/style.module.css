@@ -1,0 +1,84 @@
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-image: url('../../../starter-code/assets/crew/background-crew-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  padding-top: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: flex-end;
+  margin: 0;
+  color: white;
+}
+
+.label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-right: 120px;
+  color: white;
+}
+
+.label span {
+  color: #4e5058;
+  margin-right: 28px;
+}
+
+.containerCrew {
+  display: flex;
+  height: 420px;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0;
+  color: white;
+}
+.memberInfo {
+  margin-right: 400px;
+}
+.memberInfo p:nth-child(1) {
+  font-family: 'Bellefair', serif;
+  color: #565860;
+  font-size: 32px;
+}
+.memberInfo p:nth-child(2) {
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  margin: 15px 0 27px 0;
+}
+.memberInfo p:nth-child(3) {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  max-width: 450px;
+}
+.memberImg {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  height: 450px;
+  width: 310px;
+}
+
+.dotsContainer{
+    display: flex;
+}
+.dot{
+    height: 15px;
+    width: 15px;
+    margin-top: 120px;
+    margin-right: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+}
