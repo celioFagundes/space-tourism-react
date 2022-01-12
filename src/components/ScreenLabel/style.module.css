@@ -1,0 +1,22 @@
+.label {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.label span {
+  color: #4e5058;
+  margin-right: 28px;
+}
+@media (max-width: 375px) {
+  .label {
+    text-align: center;
+    width: 100%;
+    left: 0;
+    font-size: 16px;
+  }
+}

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styles from './style.module.css'
-import moonImg from '../../assets/destination/image-moon.png'
 import { Link, useLocation } from 'react-router-dom'
 import dataPlanets from '../../data.json'
-
+import ScreenLabel from '../../components/ScreenLabel'
 const Destination = () => {
   const location = useLocation()
   const [currentPlanet, setCurrentPlanet] = useState(null)
@@ -19,11 +18,8 @@ const Destination = () => {
     <div className={styles.wrapper}>
       {currentPlanet !== null && (
         <div className={styles.container}>
-          <div className={styles.label}>
-            <p>
-              <span>01</span>Pick your destination
-            </p>
-          </div>
+          <ScreenLabel id='01' label='Pick your destination' />
+
           <div className={styles.containerPlanet}>
             <div className={styles.colum1}>
               <img src={require(`../../assets/destination/${currentPlanet.images.png}.png`)} />

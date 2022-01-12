@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './style.module.css'
 import tecData from '../../data.json'
 import useWindowWidth from '../../useWindowWidth'
+import ScreenLabel from '../../components/ScreenLabel'
 const Technology = () => {
   const [tec, setTec] = useState(tecData.technology[0])
   const wide = useWindowWidth(810)
@@ -9,14 +10,11 @@ const Technology = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.label}>
-          <p>
-            <span>03</span>SPACE LAUNCH 101
-          </p>
-        </div>
+        <ScreenLabel id = '03' label = 'Space Launch 101'/>
+        
         {tec && (
-          <div className={styles.containerCrew}>
-            <div className={styles.memberInfo}>
+          <div className={styles.containerTech}>
+            <div className={styles.techInfo}>
               <div className={styles.descContainer}>
                   <p>The terminology</p>
                   <p>{tec.name}</p>
@@ -47,7 +45,7 @@ const Technology = () => {
             </div>
             <div className={styles.imgContainer}>
               <img
-                className={styles.memberImg}
+                className={styles.techImg}
                 src={wide ? require(`../../assets/technology/${tec.images.portrait}.jpg`) : require(`../../assets/technology/${tec.images.landscape}.jpg`)}
               />
             </div>

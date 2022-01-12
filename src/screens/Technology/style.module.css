@@ -38,7 +38,7 @@
   margin-right: 28px;
 }
 
-.containerCrew {
+.containerTech {
   display: flex;
   height: 400px;
   padding: 0;
@@ -50,25 +50,25 @@
   color: white;
 }
 
-.memberInfo {
+.techInfo {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: flex-end;
   width: 50%;
 }
-.memberInfo p:nth-child(1) {
+.techInfo p:nth-child(1) {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
   font-size: 16px;
 }
-.memberInfo p:nth-child(2) {
+.techInfo p:nth-child(2) {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
   font-size: 56px;
   margin: 15px 0 27px 0;
 }
-.memberInfo p:nth-child(3) {
+.techInfo p:nth-child(3) {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 18px;
   text-transform: none;
@@ -78,7 +78,7 @@
   max-height: fit-content;
   height: 100%;
 }
-.memberImg {
+.techImg {
   height: 100%;
   width: 100%;
 }
@@ -122,14 +122,14 @@
   .container {
     padding-left: 0;
   }
-  .containerCrew {
+  .containerTech {
     height: 100%;
     width: 100%;
     padding-top: 100px;
     padding-left: 0;
     flex-direction: column-reverse;
   }
-  .memberInfo {
+  .techInfo {
     padding-top: 40px;
     flex-direction: column-reverse;
     text-align: center;
@@ -148,32 +148,35 @@
     width: 40px;
     font-size: 18px;
   }
-  .memberInfo p:nth-child(1) {
+  .techInfo p:nth-child(1) {
     font-size: 27px;
   }
-  .memberInfo p:nth-child(2) {
+  .techInfo p:nth-child(2) {
     font-size: 40px;
   }
-  .memberInfo p:nth-child(3) {
+  .techInfo p:nth-child(3) {
     font-size: 16px;
   }
 }
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .dot {
     height: 25px;
     width: 25px;
     font-size: 12px;
   }
   .dotsContainer {
-    width: 70%;
+    width:40%;
   }
-  .memberInfo p:nth-child(1) {
+  .imgContainer{
+    height: 170px;
+  }
+  .techInfo p:nth-child(1) {
     font-size: 14px;
   }
-  .memberInfo p:nth-child(2) {
+  .techInfo p:nth-child(2) {
     font-size: 24px;
   }
-  .memberInfo p:nth-child(3) {
+  .techInfo p:nth-child(3) {
     font-size: 14px;
   }
 }

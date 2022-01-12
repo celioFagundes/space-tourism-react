@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './style.module.css'
-
+import ScreenLabel from '../../components/ScreenLabel'
 import crewData from '../../data.json'
 const Crew = () => {
   const [currentMember, setCurrentMember] = useState(crewData.crew[0])
@@ -8,11 +8,7 @@ const Crew = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.label}>
-          <p>
-            <span>02</span>Meet your Crew
-          </p>
-        </div>
+        <ScreenLabel id = '02' label ='Meet your Crew'/> 
         {currentMember && (
           <div className={styles.containerCrew}>
             <div className={styles.memberInfo}>
