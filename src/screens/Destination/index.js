@@ -29,7 +29,7 @@ const Destination = () => {
               <img src={require(`../../assets/destination/${currentPlanet.images.png}.png`)} />
             </div>
             <div className={styles.colum2}>
-              <nav className={styles.navPlanets}>
+              <div className={styles.navPlanets}>
                 <ul className={styles.list_links}>
                   <Link
                     to='/destination/moon'
@@ -64,7 +64,7 @@ const Destination = () => {
                     Titan
                   </Link>
                 </ul>
-              </nav>
+              </div>
               <div className={styles.containerDescription}>
                 <h1>{currentPlanet.name}</h1>
                 <p className={styles.description}>{currentPlanet.description}</p>
