@@ -1,114 +1,179 @@
 .wrapper {
-    height: 100vh;
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
-    background-image: url('../../assets/technology/background-technology-desktop.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/technology/background-technology-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+}
+
+.container {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding-left: 10%;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  color: white;
+}
+
+.label {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.label span {
+  color: #4e5058;
+  margin-right: 28px;
+}
+
+.containerCrew {
+  display: flex;
+  height: 400px;
+  padding: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  color: white;
+}
+
+.memberInfo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 50%;
+}
+.memberInfo p:nth-child(1) {
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.memberInfo p:nth-child(2) {
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  font-size: 56px;
+  margin: 15px 0 27px 0;
+}
+.memberInfo p:nth-child(3) {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  min-height: 88px;
+}
+.imgContainer {
+  max-height: fit-content;
+  height: 100%;
+}
+.memberImg {
+  height: 100%;
+  width: 100%;
+}
+
+.dotsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+.dot {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  font-size: 32px;
+  font-family: 'Bellefair', serif;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #131520;
+  transition: all 0.4s;
+  border: 1px solid #86878c;
+}
+.dot:hover {
+  border-color: #fff;
+}
+.dotActive {
+  background-color: #fff;
+  color: #0b0d17;
+}
+@media (max-width: 1100px) {
   .container {
-    display: flex;
-    max-width: 1200px;
+    padding-left: 45px;
+  }
+}
+@media (max-width: 810px) {
+  .wrapper {
+    background-image: url('../../assets/technology/background-technology-tablet.jpg');
+  }
+  .container {
+    padding-left: 0;
+  }
+  .containerCrew {
+    height: 100%;
     width: 100%;
     padding-top: 100px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-items: flex-end;
-    margin: 0;
-    color: white;
+    padding-left: 0;
+    flex-direction: column-reverse;
   }
-  
-  .label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px;
-    text-transform: uppercase;
-    margin-right: 120px;
-    color: white;
-    margin-bottom: 60px;
+  .memberInfo {
+    padding-top: 40px;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 40px;
   }
-  
-  .label span {
-    color: #4e5058;
-    margin-right: 28px;
+  .dotsContainer {
+    width: 50%;
+    margin-right: 0;
+    justify-content: space-between;
+    flex-direction: row;
   }
-  
-  .containerCrew {
-    display: -ms-grid;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 2fr 1fr;
-    align-items: flex-end;
-    justify-items:flex-end;
-    margin: 0;
-    color: white;
-  }
-  
-  .memberInfo{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: stretch;
-    justify-content: flex-end;
-    width: 700px;
-    padding: 0;
+  .dot {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
   }
   .memberInfo p:nth-child(1) {
-    font-family: 'Bellefair', serif;
-    text-transform: uppercase;
-    font-size: 16px;
+    font-size: 27px;
   }
   .memberInfo p:nth-child(2) {
-    font-family: 'Bellefair', serif;
-    text-transform: uppercase;
-    font-size: 56px;
-    margin: 15px 0 27px 0;
-    
+    font-size: 40px;
   }
   .memberInfo p:nth-child(3) {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    text-transform: none;
-    min-height: 88px;
-    max-width: 480px;
+    font-size: 16px;
   }
-  .imgContainer{
-    position: absolute;
-    right: 0;
-    bottom: 60px;
-    
+}
+@media (max-width: 400px){
+  .dot {
+    height: 25px;
+    width: 25px;
+    font-size: 12px;
   }
-  .memberImg {
-    height: 400px;
+  .dotsContainer {
+    width: 70%;
   }
-  
-  .dotsContainer{
-      display: flex;
-      flex-direction: column;
-      margin-right: 80px;
+  .memberInfo p:nth-child(1) {
+    font-size: 14px;
   }
-  .dot{
-      height: 80px;
-      width: 80px;
-      display: flex;
-      font-size: 32px;
-      font-family: 'Bellefair', serif;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 24px;
-      border-radius: 50%;
-      cursor: pointer;
-      background-color: #131520;
-      transition: all 0.4s;
-      border: 1px solid #86878C;
+  .memberInfo p:nth-child(2) {
+    font-size: 24px;
   }
-  .dot:hover{
-    border-color: #fff;
+  .memberInfo p:nth-child(3) {
+    font-size: 14px;
   }
-  .dotActive{
-    background-color: #fff;
-    color: #0B0D17;
-    
-  }
-  
+}

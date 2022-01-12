@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import styles from './style.module.css'
 import tecData from '../../data.json'
+import useWindowWidth from '../../useWindowWidth'
 const Technology = () => {
   const [tec, setTec] = useState(tecData.technology[0])
+  const wide = useWindowWidth(810)
+  console.log(wide)
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -14,7 +17,7 @@ const Technology = () => {
         {tec && (
           <div className={styles.containerCrew}>
             <div className={styles.memberInfo}>
-              <div>
+              <div className={styles.descContainer}>
                   <p>The terminology</p>
                   <p>{tec.name}</p>
                   <p>{tec.description}</p>
@@ -45,7 +48,7 @@ const Technology = () => {
             <div className={styles.imgContainer}>
               <img
                 className={styles.memberImg}
-                src={require(`../../assets/technology/${tec.images.portrait}.jpg`)}
+                src={wide ? require(`../../assets/technology/${tec.images.portrait}.jpg`) : require(`../../assets/technology/${tec.images.landscape}.jpg`)}
               />
             </div>
           </div>
