@@ -4,7 +4,7 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
-  background-image: url('../../../starter-code/assets/destination/background-destination-desktop.jpg');
+  background-image: url('../../assets/destination/background-destination-desktop.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -135,7 +135,7 @@ h1 {
 }
 @media (max-width: 768px) {
   .wrapper {
-    background-image: url('../../../starter-code/assets/destination/background-destination-tablet.jpg');
+    background-image: url('../../assets/destination/background-destination-tablet.jpg');
   }
   .containerPlanet {
     height: 100%;
@@ -185,7 +185,7 @@ h1 {
 }
 @media (max-width: 400px) {
   .wrapper {
-    background-image: url('../../../starter-code/assets/destination/background-destination-mobile.jpg');
+    background-image: url('../../assets/destination/background-destination-mobile.jpg');
   }
   .label {
     text-align: center;

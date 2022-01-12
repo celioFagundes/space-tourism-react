@@ -4,7 +4,7 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
-  background-image: url('../../../starter-code/assets/home/background-home-desktop.jpg');
+  background-image: url('../../assets/home/background-home-desktop.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -89,7 +89,7 @@ p {
 }
 @media (max-width: 768px) {
   .wrapper {
-    background-image: url('../../../starter-code/assets/home/background-home-tablet.jpg ');
+    background-image: url('../../assets/home/background-home-tablet.jpg ');
   }
   .container {
     grid-template-columns: 1fr;
@@ -128,7 +128,7 @@ p {
 }
 @media (max-width: 400px) {
   .wrapper {
-    background-image: url('../../../starter-code/assets/home/background-home-mobile.jpg ');
+    background-image: url('../../assets/home/background-home-mobile.jpg ');
   }
   .explore{
     height: 150px;
