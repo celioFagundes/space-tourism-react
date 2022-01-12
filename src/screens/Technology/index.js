@@ -46,6 +46,7 @@ const Technology = () => {
             <div className={styles.imgContainer}>
               <img
                 className={styles.techImg}
+                alt ='technology image'
                 src={wide ? require(`../../assets/technology/${tec.images.portrait}.jpg`) : require(`../../assets/technology/${tec.images.landscape}.jpg`)}
               />
             </div>
