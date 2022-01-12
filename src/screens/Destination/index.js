@@ -22,7 +22,7 @@ const Destination = () => {
 
           <div className={styles.containerPlanet}>
             <div className={styles.colum1}>
-              <img src={require(`../../assets/destination/${currentPlanet.images.png}.png`)} />
+              <img src={require(`../../assets/destination/${currentPlanet.images.png}.png`)} alt ={currentPlanet.name} />
             </div>
             <div className={styles.colum2}>
               <div className={styles.navPlanets}>

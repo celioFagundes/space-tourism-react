@@ -47,6 +47,7 @@ const Crew = () => {
             <div className={styles.imgContainer}>
               <img
                 className={styles.memberImg}
+                alt ={currentMember.name}
                 src={require(`../../assets/crew/${currentMember.images.png}.png`)}
               />
             </div>

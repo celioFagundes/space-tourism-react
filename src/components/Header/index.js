@@ -10,13 +10,13 @@ const Header = () => {
   const [ menuClosed, setMenuClosed] = useState(true)
   return (
     <div className={styles.wrapper}>
-      <img src={logo} className={styles.logo} />
+      <img src={logo} className={styles.logo} alt ='logo'/>
      
       <div className={styles.line}></div>
       <nav>
         <input type='checkbox' className={styles.check} id = 'check'/>
         <label htmlFor='check' className={styles.checkbtn} onClick={() => setMenuClosed(!menuClosed)}>
-          <img src={menuClosed ? hamburgerIcon : closeIcon} />
+          <img src={menuClosed ? hamburgerIcon : closeIcon} alt='menu-icon'/>
         </label>
         <div className={`${styles.blurContainer} ${!menuClosed && styles.blurOpen}`}></div>
         <ul className={`${styles.list_links} ${!menuClosed && styles.menuOpen}`}>
