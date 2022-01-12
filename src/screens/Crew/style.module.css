@@ -1,5 +1,5 @@
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -18,16 +18,17 @@
   align-items: flex-start;
   justify-items: flex-end;
   margin: 0;
+
   color: white;
 }
 
 .label {
+  box-sizing: border-box;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 28px;
   text-transform: uppercase;
   margin-right: 120px;
   color: white;
-  margin-bottom: 60px;
 }
 
 .label span {
@@ -36,18 +37,16 @@
 }
 
 .containerCrew {
-  display: -ms-grid;
   display: grid;
   width: 100%;
   grid-template-columns: 2fr 1fr;
   align-items: flex-end;
-  justify-items:flex-end;
+  justify-items: flex-end;
   margin: 0;
   color: white;
 }
 
-.memberInfo{
-  
+.memberInfo {
   height: 400px;
   width: 700px;
 }
@@ -56,13 +55,13 @@
   text-transform: uppercase;
   color: #565860;
   font-size: 32px;
+  padding-top: 60px;
 }
 .memberInfo p:nth-child(2) {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
   font-size: 56px;
   margin: 15px 0 27px 0;
-  
 }
 .memberInfo p:nth-child(3) {
   font-family: 'Barlow Condensed', sans-serif;
@@ -71,33 +70,147 @@
   min-height: 88px;
   max-width: 480px;
 }
-.imgContainer{
+.imgContainer {
   position: absolute;
   right: 10%;
   bottom: 0;
+  height: 70%;
 }
 .memberImg {
-  height: 500px;
+  height: 100%;
 }
 
-.dotsContainer{
-    display: flex;
-    margin-top: 100px;
+.dotsContainer {
+  display: flex;
+  margin-top: 100px;
 }
-.dot{
-    height: 15px;
-    width: 15px;
-    
-    margin-right: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #131520;
-    transition: all 0.4s;
+.dot {
+  height: 15px;
+  width: 15px;
+
+  margin-right: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #131520;
+  transition: all 0.4s;
 }
-.dot:hover{
-  background-color: #86878C;
+.dot:hover {
+  background-color: #86878c;
 }
-.dotActive{
+.dotActive {
   background-color: #fff;
-  
+}
+
+@media (max-width: 1100px) {
+  .container {
+    max-width: 100vw;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 100px 45px 0px 45px;
+  }
+}
+@media (max-width: 930px) {
+  .wrapper {
+    background-image: url('../../assets/crew/background-crew-tablet.jpg');
+  }
+  .containerCrew {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+  }
+  .imgContainer {
+    position: relative;
+
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: 400px;
+  }
+
+  .label {
+    position: absolute;
+    top: 100px;
+    left: 45px;
+  }
+  .memberInfo {
+    height: 250px;
+    width: 100%;
+    padding-top: 80px;
+  }
+  .memberInfo p:nth-child(1) {
+    font-size: 24px;
+    padding-top: 0px;
+  }
+  .memberInfo p:nth-child(2) {
+    font-size: 40px;
+  }
+  .memberInfo p:nth-child(3) {
+    font-size: 16px;
+    width: 100%;
+    max-width: none;
+  }
+  .dotsContainer {
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .wrapper {
+    background-image: url('../../assets/crew/background-crew-mobile.jpg');
+  }
+  .memberInfo {
+    height: 300px;
+    width: 100%;
+  }
+  .imgContainer {
+    height: 300px;
+  }
+}
+@media (max-width: 375px) {
+  .containerCrew{
+    flex-wrap: wrap-reverse;
+  }
+  .label {
+    text-align: center;
+    width: 100%;
+    position: initial;
+    font-size: 16px;
+  }
+  .memberInfo {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    
+    
+  }
+  .imgContainer{
+    padding-top: 40px;
+   
+    
+  }
+  .memberInfo p:nth-child(1) {
+    font-size: 16px;
+    padding-top: 0px;
+  }
+  .memberInfo p:nth-child(2) {
+    font-size: 24px;
+  }
+  .memberInfo p:nth-child(3) {
+    font-size: 15px;
+    width: 100%;
+    max-width: none;
+  }
+  .dotsContainer{
+    padding-bottom: 20px;
+  }
 }

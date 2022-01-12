@@ -18,16 +18,18 @@ const Header = () => {
         <label htmlFor='check' className={styles.checkbtn} onClick={() => setMenuClosed(!menuClosed)}>
           <img src={menuClosed ? hamburgerIcon : closeIcon} />
         </label>
-        <div className={styles.blurContainer}></div>
-        <ul className={styles.list_links}>
+        <div className={`${styles.blurContainer} ${!menuClosed && styles.blurOpen}`}></div>
+        <ul className={`${styles.list_links} ${!menuClosed && styles.menuOpen}`}>
           <Link
             to='/'
+            onClick={() => setMenuClosed(true) }
             className={`${styles.link} ${location.pathname === '/' && styles.linkActive}`}
           >
             <span className={styles.screenId}>00</span> Home
           </Link>
           <Link
             to='/destination/moon'
+            onClick={() => setMenuClosed(true) }
             className={`${styles.link} ${
               location.pathname.includes('destination') && styles.linkActive
             }`}
@@ -36,12 +38,14 @@ const Header = () => {
           </Link>
           <Link
             to='/crew'
+            onClick={() => setMenuClosed(true) }
             className={`${styles.link} ${location.pathname === '/crew' && styles.linkActive}`}
           >
             <span className={styles.screenId}>02</span> Crew
           </Link>
           <Link
             to='/technology'
+            onClick={() => setMenuClosed(true) }
             className={`${styles.link} ${location.pathname === '/technology' && styles.linkActive}`}
           >
             <span className={styles.screenId}>03</span> Technology

@@ -187,6 +187,12 @@ h1 {
   .wrapper {
     background-image: url('../../../starter-code/assets/destination/background-destination-mobile.jpg');
   }
+  .label {
+    text-align: center;
+    width: 100%;
+    position: initial;
+    font-size: 16px;
+  }
   .infoContainer{
     flex-direction: column;
   }

@@ -16,9 +16,11 @@ const Crew = () => {
         {currentMember && (
           <div className={styles.containerCrew}>
             <div className={styles.memberInfo}>
-              <p>{currentMember.role} </p>
-              <p>{currentMember.name}</p>
-              <p>{currentMember.bio}</p>
+              <div>
+                <p>{currentMember.role} </p>
+                <p>{currentMember.name}</p>
+                <p>{currentMember.bio}</p>
+              </div>
               <div className={styles.dotsContainer}>
                 <div
                   className={`${styles.dot} ${

@@ -142,13 +142,13 @@ nav {
   .linkActive {
     border-bottom: 0px;
   }
-  input[type='checkbox']:checked ~ ul {
+  .menuOpen {
     right: 0px;
     top: 100px;
     position: absolute;
     z-index: 10;
   }
-  input[type='checkbox']:checked ~ .blurContainer {
+  .blurOpen {
     right: 0px;
 
     position: absolute;
