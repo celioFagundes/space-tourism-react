@@ -1,5 +1,5 @@
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -13,12 +13,9 @@
   display: grid;
   max-width: 1200px;
   padding-top: 100px;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
-  justify-items:flex-end;
+  justify-items: flex-end;
   margin: 0;
   color: white;
 }
@@ -42,8 +39,6 @@ p {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
   margin: 24px 0;
-  
-  
 }
 
 .container_intro p:nth-child(3) {
@@ -53,7 +48,7 @@ p {
 }
 
 .explore {
-  position:relative;
+  position: relative;
   width: 220px;
   height: 220px;
   border-radius: 50%;
@@ -62,19 +57,19 @@ p {
   display: grid;
   place-content: center;
   cursor: pointer;
-  text-decoration: none
+  text-decoration: none;
 }
-.exploreGrow{
-  position:absolute;
-  top:0;
-  left:0;
+.exploreGrow {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 220px;
   height: 220px;
   border-radius: 50%;
   background-color: #ffffff1a;
   transition: all 0.4s;
 }
-.exploreGrow:hover{
+.exploreGrow:hover {
   transform: scale(150%);
 }
 .explore_text {
@@ -83,4 +78,60 @@ p {
   text-transform: uppercase;
   color: #000;
 }
+@media (max-width: 930px) {
+  
+  .container {
+    max-width: 100vw;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 100px 45px 0px 45px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    background-image: url('../../../starter-code/assets/home/background-home-tablet.jpg ');
+  }
+  .container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  .container_intro {
+    text-align: center;
+  }
+  .container_intro p:nth-child(1) {
+    font-size: 16px;
+  }
 
+  .container_intro p:nth-child(2) {
+    font-size: 80px;
+  }
+
+  .container_intro p:nth-child(3) {
+    font-size: 16px;
+  }
+  .explore {
+    width: 180px;
+    height: 180px;
+    margin-top: 50px;
+  }
+  .exploreGrow {
+    width: 150px;
+    height: 150px;
+  }
+  .exploreGrow:hover {
+    transform: scale(0%);
+  }
+  .explore_text {
+    font-size: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper {
+    background-image: url('../../../starter-code/assets/home/background-home-mobile.jpg ');
+  }
+  .explore{
+    height: 150px;
+    width: 150px;
+  }
+}
