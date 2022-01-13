@@ -27,38 +27,46 @@ const Destination = () => {
             <div className={styles.colum2}>
               <div className={styles.navPlanets}>
                 <ul className={styles.list_links}>
-                  <Link
-                    to='/destination/moon'
-                    className={`${styles.link} ${
-                      location.pathname === '/destination/moon' && styles.linkActive
-                    }`}
-                  >
-                    Moon
-                  </Link>
-                  <Link
-                    to='/destination/mars'
-                    className={`${styles.link} ${
-                      location.pathname === '/destination/mars' && styles.linkActive
-                    }`}
-                  >
-                    Mars
-                  </Link>
-                  <Link
-                    to='/destination/europa'
-                    className={`${styles.link} ${
-                      location.pathname === '/destination/europa' && styles.linkActive
-                    }`}
-                  >
-                    Europa
-                  </Link>
-                  <Link
-                    to='/destination/titan'
-                    className={`${styles.link} ${
-                      location.pathname === '/destination/titan' && styles.linkActive
-                    }`}
-                  >
-                    Titan
-                  </Link>
+                  <li>
+                    <Link
+                      to='/destination/moon'
+                      className={`${styles.link} ${
+                        location.pathname === '/destination/moon' && styles.linkActive
+                      }`}
+                    >
+                      Moon
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to='/destination/mars'
+                      className={`${styles.link} ${
+                        location.pathname === '/destination/mars' && styles.linkActive
+                      }`}
+                    >
+                      Mars
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to='/destination/europa'
+                      className={`${styles.link} ${
+                        location.pathname === '/destination/europa' && styles.linkActive
+                      }`}
+                    >
+                      Europa
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to='/destination/titan'
+                      className={`${styles.link} ${
+                        location.pathname === '/destination/titan' && styles.linkActive
+                      }`}
+                    >
+                      Titan
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className={styles.containerDescription}>
