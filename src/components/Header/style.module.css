@@ -25,6 +25,7 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
+  
 }
 .checkbtn {
   cursor: pointer;
@@ -48,6 +49,8 @@ nav {
   list-style: none;
   width: 100%;
   z-index: 1000;
+  padding-left:15%;
+  
 }
 
 .link {
